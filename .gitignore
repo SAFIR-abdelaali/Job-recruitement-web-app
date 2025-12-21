@@ -1,0 +1,10 @@
+target/
+*.class
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+
+# IGNORER LE FICHIER SECRET
+src/main/resources/config.properties

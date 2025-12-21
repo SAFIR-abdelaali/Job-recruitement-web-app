@@ -1,0 +1,194 @@
+/* =========================================
+   THEME: LINKEDIN PURPLE EDITION
+   ========================================= */
+
+:root {
+    --linkedin-bg: #f3f2ef;       /* Le gris typique de LinkedIn */
+    --linkedin-white: #ffffff;
+    --primary-purple: #6f42c1;    /* Violet principal */
+    --dark-purple: #4a148c;       /* Violet foncé pour la Navbar */
+    --hover-purple: #f3e5f5;      /* Violet très clair pour les survols */
+    --text-dark: #191919;         /* Noir doux */
+    --text-gray: #666666;
+    --border-color: #e0e0e0;
+    --card-radius: 10px;
+}
+
+body {
+    background-color: var(--linkedin-bg);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    color: var(--text-dark);
+    padding-top: 70px; /* Pour compenser la navbar fixe */
+}
+
+/* --- NAVBAR (STYLE HEADER) --- */
+.navbar {
+    background-color: var(--linkedin-white) !important;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: none; /* LinkedIn est très plat */
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: var(--primary-purple) !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar-text {
+    color: var(--text-gray) !important;
+    font-size: 0.9rem;
+}
+
+/* --- CARTES & CONTENEURS (Le cœur du design LinkedIn) --- */
+.container {
+    max-width: 1128px; /* Largeur standard LinkedIn */
+}
+
+.card, .table-container {
+    background-color: var(--linkedin-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-radius);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.04); /* Ombre très subtile */
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 16px 20px;
+}
+
+/* Titres des sections */
+h2, h3, h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.9);
+    margin-bottom: 15px;
+}
+
+/* --- TABLEAUX (DASHBOARD) --- */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    letter-spacing: 0.5px;
+    border: none;
+    padding: 12px 16px;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f3f3f3;
+    color: rgba(0,0,0,0.9);
+    font-size: 14px;
+}
+
+.table tr:hover {
+    background-color: var(--hover-purple); /* Effet survol violet clair */
+}
+
+/* --- BOUTONS (STYLE PILLULE) --- */
+.btn {
+    border-radius: 24px; /* Forme arrondie typique */
+    font-weight: 600;
+    padding: 6px 16px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+/* Bouton Principal (Violet Plein) */
+.btn-primary, .btn-danger {
+    background-color: var(--primary-purple);
+    border-color: var(--primary-purple);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-purple);
+    border-color: var(--dark-purple);
+}
+
+/* Bouton Secondaire (Contour Violet) */
+.btn-outline-light, .btn-secondary {
+    color: var(--text-gray);
+    background-color: transparent;
+    border: 1px solid var(--text-gray);
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(0,0,0,0.05);
+    color: var(--text-dark);
+}
+
+/* Petits boutons d'action dans le tableau */
+.btn-sm {
+    padding: 4px 12px;
+    font-size: 12px;
+}
+
+.btn-danger {
+    background-color: white;
+    color: #cfcfcf;
+    border: 1px solid #cfcfcf;
+}
+.btn-danger:hover {
+    background-color: #ffebee;
+    color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+/* --- ONGLETS (TABS) --- */
+.nav-tabs {
+    border-bottom: 1px solid var(--border-color);
+    background: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: var(--card-radius) var(--card-radius) 0 0;
+    margin-bottom: 0 !important; /* Collé au tableau */
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--text-gray);
+    font-weight: 600;
+    padding: 10px 15px;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: transparent;
+    color: var(--primary-purple);
+}
+
+.nav-tabs .nav-link.active {
+    border: none;
+    border-bottom: 3px solid var(--primary-purple);
+    color: var(--primary-purple);
+    background-color: transparent;
+}
+
+/* --- BADGES --- */
+.badge {
+    font-weight: 600;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+.bg-info {
+    background-color: #e1bee7 !important; /* Lilas clair */
+    color: #4a148c !important; /* Texte violet foncé */
+}
